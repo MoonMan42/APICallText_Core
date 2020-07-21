@@ -6,6 +6,8 @@ namespace APIHelperLibrary
 {
     public static class SunProcessor
     {
+
+        //https://sunrise-sunset.org/api
         public static async Task<SunModel> LoadSunInfo(double lat, double lng)
         {
             string url = $"https://api.sunrise-sunset.org/json?lat={lat}&lng={lng}";
