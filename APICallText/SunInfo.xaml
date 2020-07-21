@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:APICallText"
         mc:Ignorable="d"
-        Title="SunInfo" Height="200" Width="200">
+        Loaded="Window_Loaded"
+        FontSize="15px"
+        WindowStartupLocation="CenterScreen"
+        Title="SunInfo" Height="200" Width="400">
     <Grid>
         <StackPanel VerticalAlignment="Center" Margin="5">
-            <Button Content="Sun info" />
             <TextBlock x:Name="SunRiseTextBlock" Margin="20"/>
             <TextBlock x:Name="SunSetTextBlock" Margin="20"/>
         </StackPanel>

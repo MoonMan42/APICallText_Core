@@ -1,14 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using APIHelperLibrary;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace APICallText
 {
@@ -21,5 +12,14 @@ namespace APICallText
         {
             InitializeComponent();
         }
+
+        private async void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            var sunInfo = await SunProcessor.LoadSunInfo(40.7128, -74.0060); // new york
+
+            SunRiseTextBlock.Text = $"Sunrise is at {sunInfo.SunRise.ToLocalTime().ToShortTimeString()}";
+            SunSetTextBlock.Text = $"Sunset is as {sunInfo.SunSet.ToLocalTime().ToShortTimeString()}";
+        }
+
     }
 }

@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:APICallText"
         mc:Ignorable="d"
+        Loaded="WindowLoaded"
+        WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
@@ -13,12 +15,12 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="Prev" Padding="15" Margin="15"/>
-            <Button Content="Sun Info" Padding="15" Margin="15"/>
-            <Button Content="Next" Padding="15" Margin="15"/>
+            <Button x:Name="PrevButton" Content="Prev" Padding="15" Margin="15" Click="PrevButton_Click"/>
+            <Button x:Name="SunInfoButton" Content="Sun Info" Padding="15" Margin="15" Click="SunInfoButton_Click"/>
+            <Button x:Name="NextButton" Content="Next" Padding="15" Margin="15" Click="NextButton_Click"/>
         </StackPanel>
 
-        <Image x:Name="ImageItem" Grid.Row="1" />
+        <Image x:Name="comicImage" Grid.Row="1" Margin="20" />
 
     </Grid>
 </Window>
